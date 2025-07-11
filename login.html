@@ -62,12 +62,12 @@
       <form onsubmit="return loginUser(event)">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
-          <input type="text" id="username" class="form-control"/>
+          <input type="text" id="username" class="form-control" placeholder="admin" />
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <div class="input-group">
-            <input type="password" id="password" class="form-control"/>
+            <input type="password" id="password" class="form-control" placeholder="1234" />
             <button type="button" class="btn btn-outline-secondary" onclick="togglePassword()">
               <i class="bi bi-eye" id="toggleIcon"></i>
             </button>
@@ -78,7 +78,7 @@
           <label class="form-check-label" for="rememberMe">Remember me</label>
         </div>
         <div class="d-grid mb-3">
-          <button type="submit" class="btn btn-custom">Login</button>
+          <button type="submit" class="btn btn-custom" style="background-color: #112D4E; color: white;">Login</button>
         </div>
       </form>
 
@@ -118,8 +118,8 @@
         return false;
       }
 
-      if (password.length < 6) {
-        alert("Password must be at least 6 characters long.");
+      if (username !== "admin" || password !== "1234") {
+        alert("Invalid credentials. Please try again.");
         return false;
       }
 
