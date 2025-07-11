@@ -155,4 +155,8 @@ section .text-center {
   font-weight: bold;
 }
 
+.modal-content {
+  border: 3px solid #112D4E;
+  border-radius: 10px;
+}
 
